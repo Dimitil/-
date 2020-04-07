@@ -32,8 +32,10 @@ int main() {
 	a1.set_fill_color(Color::black);
 	win.attach(a1);
 
+
+
 	Box b1({230, 250}, 400, 300);
-	b1.set_color(Color::dark_blue);
+	b1.set_color(Color::black);
 	
 	win.attach(b1);
 
