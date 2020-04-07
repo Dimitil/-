@@ -28,14 +28,15 @@ int main() {
 			}
 	
 	Graph_lib::Arc a1(Point{400, 400}, 100, 50, 0, 90);
-	a1.set_color(Color::black);
-	a1.set_fill_color(Color::black);
+	a1.set_color(Color::blue);
+
 	win.attach(a1);
 
 
 
+
 	Box b1({230, 250}, 400, 300);
-	b1.set_color(Color::black);
+	b1.set_color(Color::red);
 	
 	win.attach(b1);
 
