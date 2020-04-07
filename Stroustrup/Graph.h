@@ -27,6 +27,8 @@ namespace Graph_lib {
 #undef major
 #undef minor
 
+
+
 	//------------------------------------------------------------------------------
 
 	// Color is the type we use to represent color. We can use Color like this:
