@@ -29,15 +29,20 @@ int main() {
 	
 	Graph_lib::Arc a1(Point{400, 400}, 100, 50, 0, 90);
 	a1.set_color(Color::blue);
-
 	win.attach(a1);
 
+	
 
 
+	Arrow Ar1({300, 300}, {450, 100});
+	Ar1.set_color(Color::dark_blue);
+	win.attach(Ar1);
+	Arrow Ar2({ 300, 300 }, { 600, 350 });
+	Ar2.set_color(Color::dark_blue);
+	win.attach(Ar2);
 
 	Box b1({230, 250}, 400, 300);
 	b1.set_color(Color::red);
-	
 	win.attach(b1);
 
 

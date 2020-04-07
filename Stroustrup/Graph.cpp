@@ -83,8 +83,21 @@ namespace Graph_lib {
 		add(p2);    // add p2 to this shape
 	}
 
-	//------------------------------------------------------------------------------
 
+
+	
+	//------------------------------------------------------------------------------
+	void Arrow::draw_lines() const
+	{
+		if (color().visibility())
+		{
+			fl_line(point(0).x, point(0).y, point(1).x, point(1).y);
+			fl_line(point(1).x, point(1).y, point(2).x, point(2).y);
+			fl_line(point(1).x, point(1).y, point(3).x, point(3).y);
+		}
+	}
+
+	//------------------------------------------------------------------------------
 	void Lines::add(Point p1, Point p2)
 	{
 		Shape::add(p1);
@@ -325,6 +338,7 @@ namespace Graph_lib {
 	}
 
 	//------------------------------------------------------------------------------
+
 
 	void Text::draw_lines() const
 	{

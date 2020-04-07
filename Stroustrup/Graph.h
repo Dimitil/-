@@ -227,6 +227,36 @@ namespace Graph_lib {
 	};
 
 	//------------------------------------------------------------------------------
+	
+	struct Arrow : Shape {
+
+		Arrow(Point p1, Point p2) 
+		{
+			
+			 //construct an arrow from p1 to p2
+				Shape::add(p1);
+				Shape::add(p2);
+
+				Point p3;
+				Point p4;
+				double angle = atan2(p2.y - p1.y, p2.x - p1.x);
+				p3.x = p2.x + arrow_lenght_ * std::cos(angle - arrow_degrees_);
+				p3.y = p2.y + arrow_lenght_ * std::sin(angle - arrow_degrees_);
+				p4.x = p2.x + arrow_lenght_ * std::cos(angle + arrow_degrees_);
+				p4.y = p2.y + arrow_lenght_ * std::sin(angle + arrow_degrees_);
+
+				Shape::add(p3);
+				Shape::add(p4);
+		}
+
+		void draw_lines() const;
+
+		private:
+			double arrow_lenght_ = 20;
+			double arrow_degrees_ = 35;
+	};
+
+	//------------------------------------------------------------------------------
 
 	struct Open_polyline : Shape {         // open sequence of lines
 		void add(Point p) { Shape::add(p); }
