@@ -43,6 +43,8 @@ int main() {
 
 	win.wait_for_button();
 
+	// этот текст был добавлен в тестовой ветке
+
 	return 0;
 
 
