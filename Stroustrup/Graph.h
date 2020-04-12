@@ -228,7 +228,7 @@ namespace Graph_lib {
 
 	//------------------------------------------------------------------------------
 	
-	struct Arrow : Shape {
+	struct Arrow : Shape {		//chapter 13 exercise 3
 
 		Arrow(Point p1, Point p2) 
 		{
