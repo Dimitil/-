@@ -227,6 +227,68 @@ namespace Graph_lib {
 	}
 
 	//------------------------------------------------------------------------------
+	Regular_hexagon::Regular_hexagon(Point center, int Rad) : Radius(Rad) //0.86 - this is a sqrt(3)/2 (from geometry of regular hexagon)
+	{
+		add(center);
+
+		Point p1;
+		p1.x = point(0).x - Radius / 2;
+		p1.y = point(0).y - 0.86 * Radius;
+		add(p1);
+
+		Point p2;
+		p2.x = point(0).x + Radius / 2;
+		p2.y = point(0).y - 0.86 * Radius;
+		add(p2);
+
+		Point p3;
+		p3.x = point(0).x + Radius;
+		p3.y = point(0).y;
+		add(p3);
+
+		Point p4;
+		p4.x = point(0).x + Radius / 2;
+		p4.y = point(0).y + 0.86 * Radius;
+		add(p4);
+
+		Point p5;	
+		p5.x = point(0).x - Radius / 2;
+		p5.y = point(0).y + 0.86 * Radius;
+		add(p5);
+
+		Point p6;
+		p6.x = point(0).x - Radius;
+		p6.y = point(0).y;
+		add(p6);
+
+
+	}
+
+	void Regular_hexagon::draw_lines() const
+	{
+		
+		
+		if (fill_color().visibility()) {
+			fl_color(fill_color().as_int());
+			fl_begin_complex_polygon();
+			for (int i = 1; i < number_of_points(); ++i) {
+				fl_vertex(point(i).x, point(i).y);
+			}
+			fl_end_complex_polygon();
+			fl_color(color().as_int());    // reset color
+		}
+
+		if (color().visibility() && 1 < 7)    // draw sole pixel?
+				for (unsigned int i = 2; i < 7; ++i)
+					fl_line(point(i - 1).x, point(i - 1).y, point(i).x, point(i).y);    // first draw the "open poly line part"
+										// then draw closing line:
+		if (color().visibility())
+			fl_line(point(number_of_points() - 1).x,
+				point(number_of_points() - 1).y,
+				point(1).x,
+				point(1).y);
+		
+	}
 
 	void draw_mark(Point xy, char c)
 	{

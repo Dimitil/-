@@ -53,10 +53,13 @@ int main() {
 
 	Graph_lib::Rectangle rec({ 265, 343 }, 50, 60);
 	rec.set_color(Color::blue);
-	rec.set_fill_color(Color::blue);
 	win.attach(rec);
 
-	
+	Regular_hexagon RH({ 500, 500 }, 140);
+	RH.set_color(Color::dark_yellow);
+	RH.set_fill_color(Color::dark_blue);
+	win.attach(RH);
+
 	
 	win.wait_for_button();
 

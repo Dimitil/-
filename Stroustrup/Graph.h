@@ -289,6 +289,18 @@ namespace Graph_lib {
 	};
 
 	//------------------------------------------------------------------------------
+	struct Regular_hexagon : Shape {
+
+		Regular_hexagon(Point center, int Rad); 
+
+		void draw_lines() const;
+
+		private:
+
+			int Radius;
+
+	};
+	//------------------------------------------------------------------------------
 
 	struct Lines : Shape {                 // related lines
 		void draw_lines() const;
