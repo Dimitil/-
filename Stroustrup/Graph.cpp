@@ -93,7 +93,17 @@ namespace Graph_lib {
 		{
 			fl_line(point(0).x, point(0).y, point(1).x, point(1).y);
 			fl_line(point(1).x, point(1).y, point(2).x, point(2).y);
-			fl_line(point(1).x, point(1).y, point(3).x, point(3).y);
+			fl_line(point(2).x, point(2).y, point(3).x, point(3).y);
+			fl_line(point(3).x, point(3).y, point(1).x, point(1).y);
+			
+				fl_color(color().as_int());
+				fl_begin_complex_polygon();
+				for (int i = 1; i < number_of_points(); ++i) {
+					fl_vertex(point(i).x, point(i).y);
+				}
+				fl_end_complex_polygon();
+				fl_color(color().as_int());    // reset color
+			
 		}
 	}
 
