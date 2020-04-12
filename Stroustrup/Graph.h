@@ -204,6 +204,18 @@ namespace Graph_lib {
 
 	//------------------------------------------------------------------------------
 
+	struct Pixel : Shape {
+		Pixel(Point p)
+		{
+			add(p);
+
+		}
+
+		void draw_lines() const;
+	};
+
+	//------------------------------------------------------------------------------
+
 	struct Rectangle : Shape {
 
 		Rectangle(Point xy, int ww, int hh) : h(hh), w(ww)

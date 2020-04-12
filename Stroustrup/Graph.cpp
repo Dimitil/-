@@ -27,7 +27,7 @@ namespace Graph_lib {
 		ls(0),                   // default style
 		fcolor(Color::invisible) // no fill
 	{}
-
+	
 	//------------------------------------------------------------------------------
 
 	void Shape::add(Point p)     // protected
@@ -518,6 +518,13 @@ namespace Graph_lib {
 	}
 
 	//------------------------------------------------------------------------------
+	void Pixel::draw_lines() const
+	{
+		if (color().visibility()) {
+			fl_color(color().as_int());
+			fl_point(point(0).x, point(0).y);
+		}
+	}
 
 	void Image::draw_lines() const
 	{
