@@ -532,10 +532,81 @@ namespace Graph_lib {
 	//------------------------------------------------------------------------------
 	Point nw(const Graph_lib::Rectangle &r)
 	{
-		return r.point(0);
+		Point nw = r.point(0);
+		return nw;
+	}
+	//------------------------------------------------------------------------------
+	
+	Point ne(const Graph_lib::Rectangle& r)
+	{
+		Point ne;
+		ne.x = r.point(0).x + r.width();
+		ne.y = r.point(0).y;
+		return ne;
+	}
+	//------------------------------------------------------------------------------
+
+	Point se(const Graph_lib::Rectangle& r)
+	{
+		Point se;
+		se.x = r.point(0).x + r.width();
+		se.y = r.point(0).y+r.height();
+		return se;
+	}
+	//------------------------------------------------------------------------------
+	Point sw(const Graph_lib::Rectangle& r)
+	{
+		Point sw;
+		sw.x = r.point(0).x;
+		sw.y = r.point(0).y + r.height();
+		return sw;
+	}
+	//------------------------------------------------------------------------------
+
+	Point n(const Graph_lib::Rectangle& r)
+	{
+		Point n;
+		n.x = r.point(0).x+r.width()/2;
+		n.y = r.point(0).y;
+		return n;
 	}
 
+	//------------------------------------------------------------------------------
 
+	Point e(const Graph_lib::Rectangle& r)
+	{
+		Point e;
+		e.x = r.point(0).x + r.width();
+		e.y = r.point(0).y +r.height()/2;
+		return e;
+	}
+
+	//------------------------------------------------------------------------------
+
+	Point s(const Graph_lib::Rectangle& r)
+	{
+		Point s;
+		s.x = r.point(0).x + r.width()/2;
+		s.y = r.point(0).y + r.height();
+		return s;
+	}
+	//------------------------------------------------------------------------------
+	Point w(const Graph_lib::Rectangle& r)
+	{
+		Point w;
+		w.x = r.point(0).x;
+		w.y = r.point(0).y + r.height()/2;
+		return w;
+	}
+	//------------------------------------------------------------------------------
+
+	Point center(const Graph_lib::Rectangle& r)
+	{
+		Point center;
+		center.x = r.point(0).x+ r.width()/2;
+		center.y = r.point(0).y + r.height() / 2;
+		return center;
+	}
 	//------------------------------------------------------------------------------
 
 } // of namespace Graph_lib

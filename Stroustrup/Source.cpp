@@ -57,20 +57,6 @@ int main() {
 	win.attach(rec);
 
 	
-	Point northwest = { 0,0 };
-	northwest = nw(rec);
-	
-
-	Text t(northwest, "northwest");
-	t.set_color(Color::black);
-	t.set_font(Font::helvetica_bold);
-	t.set_font_size(10);
-	win.attach(t);
-	
-	
-	
-
-
 	
 
 	win.wait_for_button();

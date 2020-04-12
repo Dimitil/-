@@ -477,7 +477,17 @@ namespace Graph_lib {
 
 	//------------------------------------------------------------------------------
 	
-	Point nw(const Graph_lib::Rectangle &r);	//return northwestpoint of rectangle
+	Point nw(const Graph_lib::Rectangle &r);	//return north-west point of rectangle
+	Point ne(const Graph_lib::Rectangle& r);	//return north-east point of rectangle
+	Point se(const Graph_lib::Rectangle& r);	//return south-eastpoint of rectangle
+	Point sw(const Graph_lib::Rectangle& r);	//return southwestpoint of rectangle
+
+	Point n(const Graph_lib::Rectangle& r);	//return north point of rectangle
+	Point e(const Graph_lib::Rectangle& r);	//return east point of rectangle
+	Point s(const Graph_lib::Rectangle& r);	//return south point of rectangle
+	Point w(const Graph_lib::Rectangle& r);	//return west point of rectangle
+
+	Point center(const Graph_lib::Rectangle& r);	//return center point of rectangle
 
 	
 } // of namespace Graph_lib
