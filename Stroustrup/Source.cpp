@@ -55,11 +55,28 @@ int main() {
 	rec.set_color(Color::blue);
 	win.attach(rec);
 
-	Regular_hexagon RH({ 500, 500 }, 140);
-	RH.set_color(Color::dark_yellow);
-	RH.set_fill_color(Color::dark_blue);
-	win.attach(RH);
+	Vector_ref <Regular_hexagon> rh;
+	for (int i = 0; i < 4; i++)
+	{
+		rh.push_back(new Regular_hexagon({50+i*150, 70},50));
+		rh[rh.size() - 1].set_fill_color(Color::blue);
+		win.attach(rh[rh.size() - 1]);
+	}
+	
+	
+	for (int i = 0; i < 4; i++)
+	{
+		rh.push_back(new Regular_hexagon({ 125 + i * 150, 70 + 43 }, 50));
+		rh[rh.size() - 1].set_fill_color(Color::blue);
+		win.attach(rh[rh.size() - 1]);
+	}
 
+	for (int i = 0; i < 4; i++)
+	{
+		rh.push_back(new Regular_hexagon({ 50 + i * 150, 70 + 86 }, 50));
+		rh[rh.size() - 1].set_fill_color(Color::blue);
+		win.attach(rh[rh.size() - 1]);
+	}
 	
 	win.wait_for_button();
 
