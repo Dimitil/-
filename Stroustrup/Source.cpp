@@ -1,7 +1,12 @@
 #include "Simple_window.h"
 #include "Graph.h"
 
+
+
+
 using namespace Graph_lib;
+
+
 
 int main() {
 
@@ -45,6 +50,28 @@ int main() {
 	b1.set_color(Color::red);
 	win.attach(b1);
 
+
+	Graph_lib::Rectangle rec({ 265, 343 }, 50, 60);
+	rec.set_color(Color::blue);
+	rec.set_fill_color(Color::blue);
+	win.attach(rec);
+
+	
+	Point northwest = { 0,0 };
+	northwest = nw(rec);
+	
+
+	Text t(northwest, "northwest");
+	t.set_color(Color::black);
+	t.set_font(Font::helvetica_bold);
+	t.set_font_size(10);
+	win.attach(t);
+	
+	
+	
+
+
+	
 
 	win.wait_for_button();
 

@@ -476,7 +476,10 @@ namespace Graph_lib {
 	};
 
 	//------------------------------------------------------------------------------
+	
+	Point nw(const Graph_lib::Rectangle &r);	//return northwestpoint of rectangle
 
+	
 } // of namespace Graph_lib
 
 #endif
