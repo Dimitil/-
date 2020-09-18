@@ -1,15 +1,4 @@
-/*
-Graph.cpp
-Minimally revised for C++11 features of GCC 4.6.3 or later
-Walter C. Daugherity		June 10, 2012
 
-Fixed bug in Axis::x label position	November 17, 2013
-*/
-
-//
-// This is a GUI support code to the chapters 12-16 of the book
-// "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
-//
 
 #include <FL/Fl_GIF_Image.H>
 #include <FL/Fl_JPEG_Image.H>
@@ -368,10 +357,10 @@ namespace Graph_lib {
 			fl_line(point(0).x + maxw-10, point(0).y + maxh,point(0).x+10, point(0).y+maxh);
 			fl_line(point(0).x, point(0).y + maxh-10, point(0).x, point(0).y+10);
 
-			fl_arc(point(0).x, point(0).y, 20, 20, 90, 180); //левый верхний угол
-			fl_arc(point(0).x + maxw-20, point(0).y, 20, 20, 0, 90); //правый верхний 
-			fl_arc(point(0).x + maxw-20 , point(0).y + maxh-20, 20, 20, 270, 0); //нижний правый
-			fl_arc(point(0).x, point(0).y+maxh-20, 20, 20, 180, 270); //нижний левый
+			fl_arc(point(0).x, point(0).y, 20, 20, 90, 180); //Г«ГҐГўГ»Г© ГўГҐГ°ГµГ­ГЁГ© ГіГЈГ®Г«
+			fl_arc(point(0).x + maxw-20, point(0).y, 20, 20, 0, 90); //ГЇГ°Г ГўГ»Г© ГўГҐГ°ГµГ­ГЁГ© 
+			fl_arc(point(0).x + maxw-20 , point(0).y + maxh-20, 20, 20, 270, 0); //Г­ГЁГ¦Г­ГЁГ© ГЇГ°Г ГўГ»Г©
+			fl_arc(point(0).x, point(0).y+maxh-20, 20, 20, 180, 270); //Г­ГЁГ¦Г­ГЁГ© Г«ГҐГўГ»Г©
 			
 		}
 
