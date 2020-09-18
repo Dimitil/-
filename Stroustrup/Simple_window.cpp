@@ -1,10 +1,4 @@
-/*
-Simple_window.cpp
-Minimally revised for C++11 features of GCC 4.6.3 or later
-Walter C. Daugherity		June 10, 2012
-*/
 
-//
 // This is a GUI support code to the chapters 12-16 of the book
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
 //
