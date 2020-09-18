@@ -1,12 +1,3 @@
-#pragma once
-/*
-Graph.h
-Minimally revised for C++11 features of GCC 4.6.3 or later
-Walter C. Daugherity		June 10, 2012
-Walter C. Daugherity		January 9, 2014
-Walter C. Daugherity		January 20, 2014
-Walter C. Daugherity		March 3, 2014
-*/
 
 //
 // This is a GUI support code to the chapters 12-16 of the book
@@ -374,13 +365,13 @@ namespace Graph_lib {
 			maxw(rw), maxh(rh), start(st), end(finish)	{
 			Point lu;
 			lu.x = xy.x - maxw;
-			lu.y = xy.y - maxh;		//вводим точку откуда будет выходить дуга, а в пямять пойдет левый верхний угол описанного квадрата
+			lu.y = xy.y - maxh;		//ГўГўГ®Г¤ГЁГ¬ ГІГ®Г·ГЄГі Г®ГІГЄГіГ¤Г  ГЎГіГ¤ГҐГІ ГўГ»ГµГ®Г¤ГЁГІГј Г¤ГіГЈГ , Г  Гў ГЇГїГ¬ГїГІГј ГЇГ®Г©Г¤ГҐГІ Г«ГҐГўГ»Г© ГўГҐГ°ГµГ­ГЁГ© ГіГЈГ®Г« Г®ГЇГЁГ±Г Г­Г­Г®ГЈГ® ГЄГўГ Г¤Г°Г ГІГ 
 			add(lu);
 		}
 
 		void draw_lines() const;
 
-		// можно добавить геттеры
+		// Г¬Г®Г¦Г­Г® Г¤Г®ГЎГ ГўГЁГІГј ГЈГҐГІГІГҐГ°Г»
 
 	private:
 		
@@ -393,7 +384,7 @@ namespace Graph_lib {
 
 	struct Box : Shape {
 
-		Box(Point xy, int w, int h) :		//левый верхний угол описанного квадрата, длинна и высота, Сообщение.
+		Box(Point xy, int w, int h) :		//Г«ГҐГўГ»Г© ГўГҐГ°ГµГ­ГЁГ© ГіГЈГ®Г« Г®ГЇГЁГ±Г Г­Г­Г®ГЈГ® ГЄГўГ Г¤Г°Г ГІГ , Г¤Г«ГЁГ­Г­Г  ГЁ ГўГ»Г±Г®ГІГ , Г‘Г®Г®ГЎГ№ГҐГ­ГЁГҐ.
 			maxw(w), maxh(h)
 		{
 			add(xy);
